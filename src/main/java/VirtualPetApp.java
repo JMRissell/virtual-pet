@@ -7,8 +7,7 @@ public class VirtualPetApp {
 		Scanner scanner = new Scanner(System.in);
 		String petName;
 		int userAction;
-
-// User Instructions
+		// User Instructions
 		VirtualPet virtualPet1 = new VirtualPet();
 		System.out.println("Please name your pet:");
 		petName = scanner.next();
@@ -19,7 +18,7 @@ public class VirtualPetApp {
 				+ "Feed = 1" + newLine + "Water = 2" + newLine + "Sleep = 3" + newLine + "Play = 4" + newLine
 				+ "Pet Status = 9" + newLine + newLine + "What would you like your first action with " + petName + "?");
 
-// Begin Game
+		// Begin Game
 		do {
 			userAction = scanner.nextInt();
 
@@ -39,7 +38,21 @@ public class VirtualPetApp {
 				System.out.println("Please enter a valid command.");
 			}
 
-// warning level conditionals
+			System.out.println(petName + " is ");
+			if (virtualPet1.years != 0) {
+				System.out.println(virtualPet1.years + "years ");
+			}
+			if (virtualPet1.months != 0) {
+				System.out.println(virtualPet1.months + "months ");
+			}
+			if (virtualPet1.weeks != 0) {
+				System.out.println(virtualPet1.weeks + "weeks ");
+			}
+			if (virtualPet1.days != 0)
+				System.out.println(virtualPet1.days + "days and ");
+			System.out.println(virtualPet1.hours + "hours old.");
+
+			// warning level conditionals
 			if (virtualPet1.hunger >= 90) {
 				System.out.println(petName + ": \"I'm starving, I need food!\"");
 			}
@@ -56,7 +69,7 @@ public class VirtualPetApp {
 		} while ((virtualPet1.hunger <= 99) & (virtualPet1.thirst <= 99) & (virtualPet1.tiredness <= 99)
 				& (virtualPet1.boredom <= 99));
 
-// NTS: Include its lifespan for this sysout
+		// NTS: Include its lifespan for this sysout
 		System.out.println(petName + " has died.");
 
 		scanner.close();
