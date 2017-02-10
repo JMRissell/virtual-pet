@@ -40,7 +40,7 @@ public class VirtualPetApp {
 			System.out.println(virtualPet1.hours + "hours old.");
 
 			System.out.println("What would you like to do next?" + newLine + "Feed " + petName + " = 1" + newLine
-					+ "Give " + petName + "water = 2" + newLine + "Put " + petName + " to sleep = 3" + newLine
+					+ "Give " + petName + " water = 2" + newLine + "Put " + petName + " to sleep = 3" + newLine
 					+ "Play with " + petName + "= 4" + newLine + "Pet Status = 9" + newLine);
 			// start tick
 			virtualPet1.tick(userAction);
