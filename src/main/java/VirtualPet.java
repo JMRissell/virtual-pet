@@ -5,7 +5,7 @@ public class VirtualPet {
 	// Declaring 4+ attributes
 	public Random random = new Random();
 
-	// Declaring 4+ attributes
+	// Declaring pet attributes
 	int randomGenes = random.nextInt(5) + 1;
 	int hunger;
 	int thirst;
@@ -48,7 +48,6 @@ public class VirtualPet {
 		boredom += randomGenes;
 	}
 
-	// NTS: include detlaTick 'Hunger =- (randomNumber)' Call this its genetics?
 	public void feedPet() {
 		hunger -= randomGenes;
 		tiredness -= randomGenes;

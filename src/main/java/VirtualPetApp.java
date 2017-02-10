@@ -18,7 +18,7 @@ public class VirtualPetApp {
 				+ "Use the following commands to decrease " + petName + "'s levels:" + "" + newLine + newLine + "Feed "
 				+ petName + " = 1" + newLine + "Give " + petName + "water = 2" + newLine + "Put " + petName
 				+ " to sleep = 3" + newLine + "Play with " + petName + "= 4" + newLine + "Pet Status = 9" + newLine
-				+ newLine + "What would you like your first action with " + petName + "to be ?");
+				+ newLine + "What would you like your first action with " + petName + " to be ?");
 
 		// Begin Game
 		do {
