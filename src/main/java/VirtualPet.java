@@ -11,7 +11,6 @@ public class VirtualPet {
 	int thirst;
 	int tiredness;
 	int boredom;
-	boolean poop;
 
 	// Declaring variables for time to use in tick method
 	int hours;
