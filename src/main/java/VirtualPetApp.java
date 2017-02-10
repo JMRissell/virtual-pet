@@ -7,7 +7,10 @@ public class VirtualPetApp {
 		Scanner scanner = new Scanner(System.in);
 		String petName;
 		int userAction;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 45cb681eff4fa4d2aa4d901355221213a5728dee
 		// User Instructions
 		VirtualPet virtualPet1 = new VirtualPet();
 		System.out.println("Please name your pet:");
@@ -39,6 +42,23 @@ public class VirtualPetApp {
 				System.out.println("Please enter a valid command.");
 			}
 
+<<<<<<< HEAD
+=======
+			System.out.println(petName + " is ");
+			if (virtualPet1.years != 0) {
+				System.out.println(virtualPet1.years + "years ");
+			}
+			if (virtualPet1.months != 0) {
+				System.out.println(virtualPet1.months + "months ");
+			}
+			if (virtualPet1.weeks != 0) {
+				System.out.println(virtualPet1.weeks + "weeks ");
+			}
+			if (virtualPet1.days != 0)
+				System.out.println(virtualPet1.days + "days and ");
+			System.out.println(virtualPet1.hours + "hours old.");
+
+>>>>>>> 45cb681eff4fa4d2aa4d901355221213a5728dee
 			// warning level conditionals
 			if (virtualPet1.hunger >= 90) {
 				System.out.println(petName + ": \"I'm starving, I need food!\"");
