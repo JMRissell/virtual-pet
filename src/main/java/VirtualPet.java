@@ -2,22 +2,17 @@ import java.util.Random;
 
 public class VirtualPet {
 
-<<<<<<< HEAD
 	// Declaring 4+ attributes
-=======
 	public Random random = new Random();
 
 	// Declaring 4+ attributes
 	int randomGenes = random.nextInt(5) + 1;
->>>>>>> 45cb681eff4fa4d2aa4d901355221213a5728dee
 	int hunger;
 	int thirst;
 	int tiredness;
 	int boredom;
-	// poop?
+	boolean poop;
 
-<<<<<<< HEAD
-=======
 	// Declaring variables for time to use in tick method
 	int hours;
 	int days;
@@ -25,7 +20,7 @@ public class VirtualPet {
 	int months;
 	int years;
 
->>>>>>> 45cb681eff4fa4d2aa4d901355221213a5728dee
+
 	// Declaring 3+ methods including tick
 	public void tick(int userAction) {
 		// Time tracking
@@ -51,7 +46,6 @@ public class VirtualPet {
 		thirst += randomGenes;
 		tiredness += randomGenes;
 		boredom += randomGenes;
-		// poop?
 	}
 
 	// NTS: include detlaTick 'Hunger =- (randomNumber)' Call this its genetics?

@@ -7,10 +7,7 @@ public class VirtualPetApp {
 		Scanner scanner = new Scanner(System.in);
 		String petName;
 		int userAction;
-<<<<<<< HEAD
 
-=======
->>>>>>> 45cb681eff4fa4d2aa4d901355221213a5728dee
 		// User Instructions
 		VirtualPet virtualPet1 = new VirtualPet();
 		System.out.println("Please name your pet:");
@@ -18,14 +15,34 @@ public class VirtualPetApp {
 
 		System.out.println("You need to keep " + petName + " "
 				+ "alive by keeping its hunger, thirst, tiredness and boredom levels below 100." + newLine
-				+ "Use the following commands to decrease " + petName + "'s levels:" + "" + newLine + newLine
-				+ "Feed = 1" + newLine + "Water = 2" + newLine + "Sleep = 3" + newLine + "Play = 4" + newLine
-				+ "Pet Status = 9" + newLine + newLine + "What would you like your first action with " + petName + "?");
+				+ "Use the following commands to decrease " + petName + "'s levels:" + "" + newLine + newLine + "Feed "
+				+ petName + " = 1" + newLine + "Give " + petName + "water = 2" + newLine + "Put " + petName
+				+ " to sleep = 3" + newLine + "Play with " + petName + "= 4" + newLine + "Pet Status = 9" + newLine
+				+ newLine + "What would you like your first action with " + petName + "to be ?");
 
 		// Begin Game
 		do {
 			userAction = scanner.nextInt();
 
+			// show pet age
+			System.out.print(petName + " is now ");
+			if (virtualPet1.years != 0) {
+				System.out.println(virtualPet1.years + "years ");
+			}
+			if (virtualPet1.months != 0) {
+				System.out.print(virtualPet1.months + "months ");
+			}
+			if (virtualPet1.weeks != 0) {
+				System.out.print(virtualPet1.weeks + "weeks ");
+			}
+			if (virtualPet1.days != 0)
+				System.out.print(virtualPet1.days + "days and ");
+			System.out.println(virtualPet1.hours + "hours old.");
+
+			System.out.println("What would you like to do next?" + newLine + "Feed " + petName + " = 1" + newLine
+					+ "Give " + petName + "water = 2" + newLine + "Put " + petName + " to sleep = 3" + newLine
+					+ "Play with " + petName + "= 4" + newLine + "Pet Status = 9" + newLine);
+			// start tick
 			virtualPet1.tick(userAction);
 			if (userAction == 1) {
 				virtualPet1.feedPet();
@@ -42,23 +59,6 @@ public class VirtualPetApp {
 				System.out.println("Please enter a valid command.");
 			}
 
-<<<<<<< HEAD
-=======
-			System.out.println(petName + " is ");
-			if (virtualPet1.years != 0) {
-				System.out.println(virtualPet1.years + "years ");
-			}
-			if (virtualPet1.months != 0) {
-				System.out.println(virtualPet1.months + "months ");
-			}
-			if (virtualPet1.weeks != 0) {
-				System.out.println(virtualPet1.weeks + "weeks ");
-			}
-			if (virtualPet1.days != 0)
-				System.out.println(virtualPet1.days + "days and ");
-			System.out.println(virtualPet1.hours + "hours old.");
-
->>>>>>> 45cb681eff4fa4d2aa4d901355221213a5728dee
 			// warning level conditionals
 			if (virtualPet1.hunger >= 90) {
 				System.out.println(petName + ": \"I'm starving, I need food!\"");
@@ -76,8 +76,20 @@ public class VirtualPetApp {
 		} while ((virtualPet1.hunger <= 99) & (virtualPet1.thirst <= 99) & (virtualPet1.tiredness <= 99)
 				& (virtualPet1.boredom <= 99));
 
-		// NTS: Include its lifespan for this sysout
-		System.out.println(petName + " has died.");
+		// death age
+		System.out.print(petName + " has died after ");
+		if (virtualPet1.years != 0) {
+			System.out.print(virtualPet1.years + "years ");
+		}
+		if (virtualPet1.months != 0) {
+			System.out.print(virtualPet1.months + "months ");
+		}
+		if (virtualPet1.weeks != 0) {
+			System.out.print(virtualPet1.weeks + "weeks ");
+		}
+		if (virtualPet1.days != 0)
+			System.out.print(virtualPet1.days + "days and ");
+		System.out.println(virtualPet1.hours + "hours.");
 
 		scanner.close();
 	}
